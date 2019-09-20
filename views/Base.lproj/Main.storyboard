@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbE-3I-ygk">
+                                <rect key="frame" x="178.66666666666666" y="51" width="57" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Начать"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2f-Vl-tdd"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="k9d-ZH-Amh">
+                                <rect key="frame" x="304" y="8" width="94" height="32"/>
+                                <connections>
+                                    <action selector="StepperCganged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h0w-8N-GIA"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-nQ-v07">
+                                <rect key="frame" x="16.000000000000007" y="14" width="113.66666666666669" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxX-Ll-7qn">
+                                <rect key="frame" x="132.66666666666666" y="695.66666666666663" width="148.99999999999997" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooR-Pg-fvx">
+                                <rect key="frame" x="16" y="92" width="382" height="587.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="gZh-hq-JYG">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="1kY-e7-Xb8"/>
+                                            <constraint firstAttribute="height" constant="80" id="gaU-VW-PzH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uBX-Gj-hmX" appends="YES" id="kMn-hF-gYv"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gZh-hq-JYG" firstAttribute="top" secondItem="ooR-Pg-fvx" secondAttribute="top" id="CwX-hR-TfI"/>
+                                    <constraint firstItem="gZh-hq-JYG" firstAttribute="leading" secondItem="ooR-Pg-fvx" secondAttribute="leading" id="OL1-Nh-vTt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ooR-Pg-fvx" secondAttribute="trailing" constant="16" id="9Fc-6c-PvE"/>
+                            <constraint firstItem="vbE-3I-ygk" firstAttribute="top" secondItem="k9d-ZH-Amh" secondAttribute="bottom" constant="11" id="FcZ-m2-Y6U"/>
+                            <constraint firstItem="cRc-nQ-v07" firstAttribute="centerY" secondItem="k9d-ZH-Amh" secondAttribute="centerY" id="HHP-dy-vWe"/>
+                            <constraint firstItem="wxX-Ll-7qn" firstAttribute="top" secondItem="ooR-Pg-fvx" secondAttribute="bottom" constant="16" id="IT4-a9-rWT"/>
+                            <constraint firstAttribute="trailing" secondItem="k9d-ZH-Amh" secondAttribute="trailing" constant="16" id="Jit-4t-TPW"/>
+                            <constraint firstItem="ooR-Pg-fvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NZO-bw-Kp6"/>
+                            <constraint firstItem="k9d-ZH-Amh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ORR-6u-6NV"/>
+                            <constraint firstItem="k9d-ZH-Amh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRc-nQ-v07" secondAttribute="trailing" id="fS7-dQ-sUh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wxX-Ll-7qn" secondAttribute="bottom" constant="20" id="jXx-6o-n0t"/>
+                            <constraint firstItem="cRc-nQ-v07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="joP-gh-6ho"/>
+                            <constraint firstItem="ooR-Pg-fvx" firstAttribute="top" secondItem="vbE-3I-ygk" secondAttribute="bottom" constant="8" id="pdO-Nu-lle"/>
+                            <constraint firstItem="wxX-Ll-7qn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="spc-T0-tcN"/>
+                            <constraint firstItem="vbE-3I-ygk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yIp-We-6mn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="vbE-3I-ygk" id="dKH-kR-AF9"/>
+                        <outlet property="gameFieldView" destination="ooR-Pg-fvx" id="aH9-pG-SnJ"/>
+                        <outlet property="gameObject" destination="gZh-hq-JYG" id="lwl-HU-8Bh"/>
+                        <outlet property="scoreLabel" destination="wxX-Ll-7qn" id="KRB-rD-2t0"/>
+                        <outlet property="shapeX" destination="OL1-Nh-vTt" id="uLs-k2-2ib"/>
+                        <outlet property="shapeY" destination="CwX-hR-TfI" id="qeA-VI-cbi"/>
+                        <outlet property="stepper" destination="k9d-ZH-Amh" id="Bc4-26-rtc"/>
+                        <outlet property="timeLabel" destination="cRc-nQ-v07" id="xPW-kc-fSl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uBX-Gj-hmX">
+                    <connections>
+                        <action selector="objectTapped:" destination="BYZ-38-t0r" id="FBe-rM-yge"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="triangle" width="2560" height="2560"/>
+    </resources>
+</document>
